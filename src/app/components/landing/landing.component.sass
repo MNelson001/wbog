@@ -1,3 +1,24 @@
+%flexRow
+    display: flex
+    justify-content: center
+    align-items: center
+
+%flexColumn
+    display: flex
+    justify-content: space-around
+    align-items: center
+    flex-direction: column
+
+%backgroundFull
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center
+
+%boxStylings
+    border-radius: 10px
+    box-shadow: 3px 3px 7px #444444
+    background-color: #ffffff
+    
 .underline
     height: 2px
     width: 20%
@@ -11,9 +32,7 @@
     align-items: center
     justify-content: center
     background-image: url('https://c.wallhere.com/photos/9a/b6/1920x1080_px_Blue_Background_Colorful_digital_art_geometry_hexagon-570692.jpg!d')
-    background-size: cover
-    background-repeat: no-repeat
-    background-position: center
+    @extend %backgroundFull
 
 #landing-container 
     height: 100%
@@ -25,28 +44,18 @@
     .c-1, .c-2
         width: 40%
         height: 100%
-        display: flex
-        flex-direction: column
-        justify-content: space-around
-        align-items: center
+        @extend %flexColumn
 
         .c-1-dp
             height: 40%
             width: 75%
-            background: #ffffff
-            border-radius: 5px
-            box-shadow: 3px 3px 7px #444444
+            @extend %boxStylings
 
         .c-2-dp
             height: 90%
             width: 100%
-            background: #ffffff
-            border-radius: 5px
-            box-shadow: 3px 3px 7px #444444
-            display: flex
-            justify-content: space-between
-            flex-direction: column
-            align-items: center
+            @extend %boxStylings
+            @extend %flexColumn
 
             &-graph 
                 margin-top: 5%
@@ -78,9 +87,7 @@
                     height: 80%
 
                     ul
-                        display: flex
-                        flex-direction: column
-                        justify-content: space-around
+                        @extend %flexColumn
                         height: 100%
                         list-style: none
                         padding: 0px
