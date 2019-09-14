@@ -41,53 +41,39 @@
     display: flex
     justify-content: space-around
 
-    .c-1, .c-2
-        width: 40%
+    .user
+        width: 15%
         height: 100%
-        @extend %flexColumn
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: space-around
 
-        .c-1-dp
-            height: 40%
+        &-tile 
             width: 75%
-            @extend %boxStylings
+            height: 15%
+            background: #ffffff
 
-        .c-2-dp
-            height: 90%
-            width: 100%
-            @extend %boxStylings
-            @extend %flexColumn
+        &-info
+            height: 75%
+            width: 75%
+            background: #ffffff
 
-            &-graph 
-                margin-top: 5%
-                border-radius: 10px
-                width: 90%
-                height: 40%
-                background: rgba(0,0,0,0.05)
+    .lfst
+        width: 85%
+        height: 100%
+        display: flex
+        flex-direction: column
+        align-items: center
+        background-color: transparent
+        justify-content: space-around
 
-            &-details
-                height: 50%
-                width: 90%
-                border-radius: 10px
-                margin-bottom: 5%
-
-                &-title
-                    height: 15%
-                    display: flex
-                    justify-content: center
-                    flex-direction: column
-                    align-items: center
-
-                    h3
-                        margin: 10px
-                        font-family: 'Roboto', sans-serif
-                        font-weight: 100
-                        letter-spacing: 5px
-
-                &-items
-                    height: 80%
-
-                    ul
-                        @extend %flexColumn
-                        height: 100%
-                        list-style: none
-                        padding: 0px
+        &-feed 
+            width: 90%
+            height: 10%
+            background-color: #e3e3e3
+        
+        &-table
+            height: 80%
+            width: 90%
+            background-color: #e3e3e3
