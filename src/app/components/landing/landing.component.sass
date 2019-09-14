@@ -17,7 +17,8 @@
 %boxStylings
     border-radius: 10px
     box-shadow: 3px 3px 7px #444444
-    background-color: #ffffff
+    background-color: #3d3d3d
+    border: 2px solid #0096c3
     
 .underline
     height: 2px
@@ -52,12 +53,11 @@
         &-tile 
             width: 75%
             height: 15%
-            background: #ffffff
+            @extend %boxStylings
 
         &-info
             height: 75%
             width: 75%
-            background: #ffffff
 
     .lfst
         width: 85%
@@ -71,9 +71,20 @@
         &-feed 
             width: 90%
             height: 10%
-            background-color: #e3e3e3
+            @extend %boxStylings
         
         &-table
-            height: 80%
+            height: 50%
             width: 90%
-            background-color: #e3e3e3
+            @extend %flexRow
+            justify-content: space-between
+
+            &-col
+                width: 30%
+                height: 100%
+                @extend %boxStylings
+
+        &-game-select
+            width: 90%
+            height: 25%
+            @extend %boxStylings
